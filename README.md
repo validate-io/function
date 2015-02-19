@@ -16,20 +16,31 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 
 ## Usage
 
-To use the module,
-
 ``` javascript
 var isFunction = require( 'validate.io-function' );
+```
 
-console.log( isFunction( function foo(){} ) );
-// Returns true
+#### isFunction( value )
 
-console.log( isFunction( {} ) );
-// Returns false
+Validates if a `value` is a `function`.
+
+``` javascript
+var value = function beep(){};
+
+var bool = isFunction( value );
+// returns true
 ```
 
 
 ## Examples
+
+``` javascript
+console.log( isFunction( function foo(){} ) );
+// returns true
+
+console.log( isFunction( {} ) );
+// returns false
+```
 
 To run the example code from the top-level application directory,
 
@@ -42,7 +53,7 @@ $ node ./examples/index.js
 
 ### Unit
 
-Unit tests use the [Mocha](http://visionmedia.github.io/mocha) test framework with [Chai](http://chaijs.com) assertions. To run the tests, execute the following command in the top-level application directory:
+Unit tests use the [Mocha](http://mochajs.org) test framework with [Chai](http://chaijs.com) assertions. To run the tests, execute the following command in the top-level application directory:
 
 ``` bash
 $ make test
@@ -62,16 +73,16 @@ $ make test-cov
 Istanbul creates a `./reports/coverage` directory. To access an HTML version of the report,
 
 ``` bash
-$ open reports/coverage/lcov-report/index.html
+$ make view-cov
 ```
 
 
+---
 ## License
 
 [MIT license](http://opensource.org/licenses/MIT). 
 
 
----
 ## Copyright
 
 Copyright &copy; 2014. Athan Reines.

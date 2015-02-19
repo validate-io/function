@@ -1,7 +1,9 @@
+'use strict';
+
 var isFunction = require( './../lib' );
 
 console.log( isFunction( function foo(){} ) );
-// Returns true
+// returns true
 
 console.log( isFunction( {} ) );
-// Returns false
+// returns false
