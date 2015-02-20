@@ -28,7 +28,9 @@
     "validation",
     "validator",
     "valid",
-    "function"
+    "function",
+    "is",
+    "isfunction"
   ],
   "bugs": {
     "url": "https://github.com/validate-io/function/issues"
